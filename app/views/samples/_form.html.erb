@@ -1,0 +1,87 @@
+<%= form_with(model: sample, local: true) do |form| %>
+  <% if sample.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sample.errors.count, "error") %> prohibited this sample from being saved:</h2>
+
+      <ul>
+      <% sample.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :temperature %>
+    <%= form.text_field :temperature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :humidity %>
+    <%= form.text_field :humidity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pressure %>
+    <%= form.text_field :pressure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eco2 %>
+    <%= form.number_field :eco2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tvoc %>
+    <%= form.number_field :tvoc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ccs_temperature %>
+    <%= form.text_field :ccs_temperature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lux %>
+    <%= form.number_field :lux %>
+  </div>
+
+  <div class="field">
+    <%= form.label :full_light %>
+    <%= form.number_field :full_light %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ir %>
+    <%= form.number_field :ir %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visible %>
+    <%= form.number_field :visible %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pm1 %>
+    <%= form.number_field :pm1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pm25 %>
+    <%= form.number_field :pm25 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pm10 %>
+    <%= form.number_field :pm10 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dust_density %>
+    <%= form.text_field :dust_density %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

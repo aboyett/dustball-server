@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @sample.temperature %>
+</p>
+
+<p>
+  <strong>Humidity:</strong>
+  <%= @sample.humidity %>
+</p>
+
+<p>
+  <strong>Pressure:</strong>
+  <%= @sample.pressure %>
+</p>
+
+<p>
+  <strong>Eco2:</strong>
+  <%= @sample.eco2 %>
+</p>
+
+<p>
+  <strong>Tvoc:</strong>
+  <%= @sample.tvoc %>
+</p>
+
+<p>
+  <strong>Ccs temperature:</strong>
+  <%= @sample.ccs_temperature %>
+</p>
+
+<p>
+  <strong>Lux:</strong>
+  <%= @sample.lux %>
+</p>
+
+<p>
+  <strong>Full light:</strong>
+  <%= @sample.full_light %>
+</p>
+
+<p>
+  <strong>Ir:</strong>
+  <%= @sample.ir %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @sample.visible %>
+</p>
+
+<p>
+  <strong>Pm1:</strong>
+  <%= @sample.pm1 %>
+</p>
+
+<p>
+  <strong>Pm25:</strong>
+  <%= @sample.pm25 %>
+</p>
+
+<p>
+  <strong>Pm10:</strong>
+  <%= @sample.pm10 %>
+</p>
+
+<p>
+  <strong>Dust density:</strong>
+  <%= @sample.dust_density %>
+</p>
+
+<%= link_to 'Edit', edit_sample_path(@sample) %> |
+<%= link_to 'Back', samples_path %>
