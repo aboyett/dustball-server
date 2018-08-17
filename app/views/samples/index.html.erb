@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Created At</th>
       <th>Temperature</th>
       <th>Humidity</th>
       <th>Pressure</th>
@@ -28,6 +29,7 @@
   <tbody>
     <% @samples.each do |sample| %>
       <tr>
+	<td><%= sample.created_at %></td>
         <td><%= sample.temperature %></td>
         <td><%= sample.humidity %></td>
         <td><%= sample.pressure %></td>
