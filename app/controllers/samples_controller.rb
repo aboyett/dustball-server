@@ -70,6 +70,6 @@ class SamplesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sample_params
-      params.require(:sample).permit(:temperature, :humidity, :pressure, :eco2, :tvoc, :ccs_temperature, :lux, :full_light, :ir, :visible, :pm1, :pm25, :pm10, :dust_density)
+      params.require(:sample).permit(:temperature, :humidity, :pressure, :eco2, :tvoc, :ccs_temperature, :lux, :full_light, :ir, :visible, :pm1, :pm25, :pm10, :dust_density, :uptime, :freeheap)
     end
 end

@@ -19,6 +19,8 @@
       <th>Pm25</th>
       <th>Pm10</th>
       <th>Dust density</th>
+      <th>Uptime</th>
+      <th>Free heap</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -40,6 +42,8 @@
         <td><%= sample.pm25 %></td>
         <td><%= sample.pm10 %></td>
         <td><%= sample.dust_density %></td>
+        <td><%= sample.uptime %></td>
+        <td><%= sample.freeheap %></td>
         <td><%= link_to 'Show', sample %></td>
         <td><%= link_to 'Edit', edit_sample_path(sample) %></td>
         <td><%= link_to 'Destroy', sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>

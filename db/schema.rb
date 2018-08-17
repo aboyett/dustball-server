@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_16_153353) do
+ActiveRecord::Schema.define(version: 2018_08_17_192112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,12 @@ ActiveRecord::Schema.define(version: 2018_08_16_153353) do
     t.float "dust_density", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "uptime", default: 0, null: false
+    t.integer "freeheap", default: 0, null: false
     t.index ["ccs_temperature"], name: "index_samples_on_ccs_temperature"
     t.index ["dust_density"], name: "index_samples_on_dust_density"
     t.index ["eco2"], name: "index_samples_on_eco2"
+    t.index ["freeheap"], name: "index_samples_on_freeheap"
     t.index ["full_light"], name: "index_samples_on_full_light"
     t.index ["humidity"], name: "index_samples_on_humidity"
     t.index ["ir"], name: "index_samples_on_ir"
@@ -45,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_153353) do
     t.index ["pressure"], name: "index_samples_on_pressure"
     t.index ["temperature"], name: "index_samples_on_temperature"
     t.index ["tvoc"], name: "index_samples_on_tvoc"
+    t.index ["uptime"], name: "index_samples_on_uptime"
     t.index ["visible"], name: "index_samples_on_visible"
   end
 
