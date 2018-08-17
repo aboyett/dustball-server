@@ -29,7 +29,7 @@
   <tbody>
     <% @samples.each do |sample| %>
       <tr>
-	<td><%= sample.created_at %></td>
+	<td><%= link_to sample.created_at, sample %></td>
         <td><%= sample.temperature %></td>
         <td><%= sample.humidity %></td>
         <td><%= sample.pressure %></td>
@@ -46,9 +46,6 @@
         <td><%= sample.dust_density %></td>
         <td><%= sample.uptime %></td>
         <td><%= sample.freeheap %></td>
-        <td><%= link_to 'Show', sample %></td>
-        <td><%= link_to 'Edit', edit_sample_path(sample) %></td>
-        <td><%= link_to 'Destroy', sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
