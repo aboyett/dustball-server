@@ -5,7 +5,7 @@ class SamplesController < ApplicationController
   # GET /samples
   # GET /samples.json
   def index
-    @samples = Sample.order(created_at: :desc)
+    @samples = Sample.order(created_at: :desc).limit(250)
   end
 
   # GET /samples/1
