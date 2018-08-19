@@ -20,7 +20,7 @@
   <% @samples_2hours.each do |sample|
            unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
     %>
-     { "x": <%= sample.id %>, "y": <%= sample.pm1 %> },
+     { "x":  "<%= sample.created_at %>", "y": <%= sample.pm1 %> },
    <%   end
 	end
     %>
@@ -33,7 +33,7 @@
   <% @samples_2hours.each do |sample|
            unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
     %>
-     { "x": <%= sample.id %>, "y": <%= sample.pm25 %> },
+     { "x":  "<%= sample.created_at %>", "y": <%= sample.pm25 %> },
    <%   end
 	end
     %>
@@ -46,7 +46,7 @@
   <% @samples_2hours.each do |sample|
            unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
     %>
-     { "x": <%= sample.id %>, "y": <%= sample.pm10 %> },
+     { "x":  "<%= sample.created_at %>", "y": <%= sample.pm10 %> },
    <%   end
 	end
     %>
@@ -61,7 +61,7 @@
   <% @samples_24hours.each do |sample|
            unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
     %>
-     { "x": <%= sample.id %>, "y": <%= sample.pm1 %> },
+     { "x":  "<%= sample.created_at %>", "y": <%= sample.pm1 %> },
    <%   end
 	end
     %>
