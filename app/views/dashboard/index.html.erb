@@ -13,33 +13,46 @@
   {
     key: "PM 1.0",
     values: [
-  <% @samples.each do |sample| %>
+  <% @samples.each do |sample|
+           unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
+    %>
      { "x": <%= sample.id %>, "y": <%= sample.pm1 %> },
-   <% end %>
+   <%   end
+	end
+    %>
      ]
   },
 
   {
   key: "PM 2.5",
   values: [
-  <% @samples.each do |sample| %>
+  <% @samples.each do |sample|
+           unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
+    %>
      { "x": <%= sample.id %>, "y": <%= sample.pm25 %> },
-   <% end %>
+   <%   end
+	end
+    %>
   ]
   },
 
   {
   key: "PM 10.0",
   values: [
-  <% @samples.each do |sample| %>
+  <% @samples.each do |sample|
+           unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
+    %>
      { "x": <%= sample.id %>, "y": <%= sample.pm10 %> },
-   <% end %>
+   <%   end
+	end
+    %>
   ]
   }
   ];
 
   nv.addGraph(function () {
-  var chart = nv.models.lineChart() // Initialise the lineChart object.
+   var chart = nv.models.lineChart()    // Initialise the lineChart object.
+                                      .height(400)
                                     .useInteractiveGuideline(true); // Turn on interactive guideline (tooltips)
   
   chart.xAxis.axisLabel('TimeStamp (Year)'); // Set the label of the xAxis (Vertical)
@@ -48,7 +61,8 @@
   
   d3.select('#averageDegreesLineChart svg') // Select the ID of the html element we defined earlier.
       .datum(PMJSON) // Pass in the JSON
-      .transition().duration(500) // Set transition speed
+      .transition().duration(500)    // Set transition speed
+      .style({ height: "400px" })
       .call(chart); // Call & Render the chart
 
   nv.utils.windowResize(chart.update); // Intitiate listener for window resize so the chart responds and changes width.
