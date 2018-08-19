@@ -74,7 +74,7 @@
   <% @samples_24hours.each do |sample|
            unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
     %>
-     { "x": <%= sample.id %>, "y": <%= sample.pm25 %> },
+     { "x": <%= sample.created_at %>, "y": <%= sample.pm25 %> },
    <%   end
 	end
     %>
@@ -87,7 +87,7 @@
   <% @samples_24hours.each do |sample|
            unless sample.pm1 == 0 && sample.pm25 == 0 && sample.pm10 == 0 
     %>
-     { "x": <%= sample.id %>, "y": <%= sample.pm10 %> },
+     { "x": <%= sample.created_at %>, "y": <%= sample.pm10 %> },
    <%   end
 	end
     %>
@@ -101,8 +101,8 @@
                                       .height(400)
                                     .useInteractiveGuideline(true); // Turn on interactive guideline (tooltips)
   
-  chart.xAxis.axisLabel('TimeStamp (Year)'); // Set the label of the xAxis (Vertical)
-  chart.yAxis.axisLabel('Degrees (c)') // Set the label of the xAxis (Horizontal)
+  chart.xAxis.axisLabel('Time'); // Set the label of the xAxis (Vertical)
+  chart.yAxis.axisLabel('Particle count') // Set the label of the xAxis (Horizontal)
                     .tickFormat(d3.format('.02f')); // Rounded Numbers Format.
   
   d3.select('#averageDegreesLineChart svg') // Select the ID of the html element we defined earlier.
@@ -118,8 +118,8 @@
                                       .height(400)
                                     .useInteractiveGuideline(true); // Turn on interactive guideline (tooltips)
   
-  chart24.xAxis.axisLabel('TimeStamp (Year)'); // Set the label of the xAxis (Vertical)
-  chart24.yAxis.axisLabel('Degrees (c)') // Set the label of the xAxis (Horizontal)
+  chart24.xAxis.axisLabel('Time'); // Set the label of the xAxis (Vertical)
+  chart24.yAxis.axisLabel('Particle count') // Set the label of the xAxis (Horizontal)
                     .tickFormat(d3.format('.02f')); // Rounded Numbers Format.
   
   d3.select('#pm24HoursLineChart svg') // Select the ID of the html element we defined earlier.
