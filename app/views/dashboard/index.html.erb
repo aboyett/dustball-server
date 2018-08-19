@@ -123,7 +123,7 @@
                     .tickFormat(d3.format('.02f')); // Rounded Numbers Format.
   
   d3.select('#pm24HoursLineChart svg') // Select the ID of the html element we defined earlier.
-      .datum(PM_24HOURS_JSON) // Pass in the JSON
+      .datum(PM_24_HOURS_JSON) // Pass in the JSON
       .transition().duration(500)    // Set transition speed
       .style({ height: "400px" })
       .call(chart24); // Call & Render the chart
