@@ -5,7 +5,7 @@ class SamplesController < ApplicationController
   # GET /samples
   # GET /samples.json
   def index
-    @samples = Sample.order(created_at: :desc)..paginate(page: params[:page], per_page: 250)
+    @samples = Sample.order(created_at: :desc).paginate(page: params[:page], per_page: 250)
   end
 
   # GET /samples/1
