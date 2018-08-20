@@ -1,13 +1,18 @@
 <% # from https://css-tricks.com/how-to-make-a-modern-dashboard-with-nvd3-js/ %>
 
-<div id="averageDegreesLineChart" class='with-3d-shadow with-transitions averageDegreesLineChart'>
+<div class='card'>
+<h2 class='card-title'>Last 2 Hours</h2>
+<div id="pm2HoursLineChart" class='with-3d-shadow with-transitions pm2HoursLineChart'>
   <svg></svg>
 </div>
-
-<div id="pm24HoursLineChart" class='with-3d-shadow with-transitions averageDegreesLineChart'>
-  <svg></svg>
 </div>
 
+<div class='card'>
+<h2 class='card-title'>Last 24 Hours</h2>
+<div id="pm24HoursLineChart" class='with-3d-shadow with-transitions pm2HoursLineChart'>
+  <svg></svg>
+</div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.js"></script>
@@ -105,7 +110,7 @@
   chart.yAxis.axisLabel('Particle count') // Set the label of the xAxis (Horizontal)
                     .tickFormat(d3.format('.02f')); // Rounded Numbers Format.
   
-  d3.select('#averageDegreesLineChart svg') // Select the ID of the html element we defined earlier.
+  d3.select('#pm2HoursLineChart svg') // Select the ID of the html element we defined earlier.
       .datum(PM_2_HOURS_JSON) // Pass in the JSON
       .transition().duration(500)    // Set transition speed
       .style({ height: "400px" })
