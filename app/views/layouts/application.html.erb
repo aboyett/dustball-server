@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SensorBucket</title>
+    <title>Dustball</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Language" content="en">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,7 +18,41 @@
 
   <body>
     <div class='container-fluid'>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Dustball</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+    <%= link_to 'Graphs', dashboard_path, class: 'nav-link' %>
+    </li> 
+    <li class="nav-item">
+    <%= link_to 'Samples', samples_path, class: 'nav-link' %>
+    </li>
+  </ul>
+</nav>
+
      <%= yield %>
+
+<footer>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+    <%= link_to 'Dustball server source', 'https://github.com/romkey/dustball-server', class: 'nav-link' %>
+    </li> 
+    <li class="nav-item">
+    <%= link_to 'Dustball ESP32 source', 'https://github.com/romkey/dustball-esp32', class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+    <%= link_to 'MIT License', 'https://romkey.mit-license.org', class: 'nav-link' %>
+    </li>
+  </ul>
+</nav>
+</footer>
     </div>
+    
   </body>
 </html>
