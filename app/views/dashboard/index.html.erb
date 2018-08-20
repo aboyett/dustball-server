@@ -135,7 +135,7 @@ var seconds = "0" + date.getSeconds();
                                       .height(400)
                                     .useInteractiveGuideline(true); // Turn on interactive guideline (tooltips)
   
-  chart24.xAxis.axisLabel('Time'; // Set the label of the xAxis (Vertical)
+  chart24.xAxis.axisLabel('Time') // Set the label of the xAxis (Vertical)
                      .tickFormat(function(unix_timestamp) {var date = new Date(unix_timestamp*1000);
 // Hours part from the timestamp
 var hours = date.getHours();
